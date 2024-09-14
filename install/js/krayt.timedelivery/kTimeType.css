@@ -1,0 +1,141 @@
+.kt_wrp_modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+}
+.kt_wrp_modal_title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+.kt_wrp_modal_desc{
+    margin-top: 10px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+.kt_wrp_modal:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+.kt_wrp_modal.open{
+    visibility: visible;
+    opacity: 1;
+}
+.kt_modal_content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    max-width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    z-index: 2;
+    height: max-content;
+}
+.kt_modal_close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 8px;
+    background-color: #eee;
+    line-height: 14px;
+    font-size: 14px;
+}
+.kt_modal_close:hover{
+    background-color: #E0E0E0;
+}
+.kt_table{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+}
+.kt_table_col{
+    display: block;
+    flex-grow: 1;
+}
+.kt_table_row{
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #DEDEDE;
+    cursor: pointer;
+    margin: 6px 3px;
+}
+.kt_table_row:hover{
+    background-color: #eee;
+}
+.kt_table_row.block{
+    opacity: 0.6;
+    cursor: default;
+}
+.kt_table_row.block:hover{
+    background-color: #fff;
+}
+.kt_table_title{
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+}
+.kt_table_title div{
+    font-size: 14px;
+}
+.kt_table_title small{
+    font-size: 12px;
+}
+@media screen and (max-width: 1024px) {
+    .kt_modal_content{
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .kt_table_title div{
+        font-size: 12px;
+    }
+    .kt_table_row {
+        padding: 3px;
+        margin: 6px 2px;
+        font-size: 12px;
+    }
+    .kt_modal_content{
+        max-width: 98%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .kt_table_title div{
+        font-size: 14px;
+    }
+    .kt_table_row {
+        padding: 5px;
+        margin: 6px 3px;
+        font-size: 14px;
+    }
+    .kt_modal_content{
+        max-width: 99%;
+    }
+    .kt_table{
+        overflow-y: auto;
+        justify-content: normal;
+    }
+    .kt_table_col {
+        display: block;
+        flex-grow: 1;
+        min-width: 120px;
+    }
+    .kt_modal_content{
+        padding: 10px;
+    }
+}
